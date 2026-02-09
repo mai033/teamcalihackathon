@@ -428,8 +428,6 @@ export default function Scenario1Prototype() {
 
   const handleReset = () => {
     setStep(0);
-    setShowUpdateForm(false);
-    setUserUpdates('');
   };
 
   return (

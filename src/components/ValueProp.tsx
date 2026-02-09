@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Gauge, 
-  Rocket, 
-  Eye,
   CheckCircle2,
   Quote,
   User,
