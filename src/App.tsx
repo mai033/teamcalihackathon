@@ -2,15 +2,10 @@ import PresentationLayout from './components/PresentationLayout';
 import NorthStar from './components/NorthStar';
 import ValueProp from './components/ValueProp';
 import Solution from './components/Solution';
-import UserJourney from './components/UserJourney';
-import Features from './components/Features';
-import KPIs from './components/KPIs';
-import ComplexityToImplement from './components/ComplexityToImplement';
 import BusinessValue from './components/BusinessValue';
 import Prototype from './components/Prototype';
 import SolutionDetails from './components/SolutionDetails';
-import Roadmap from './components/Roadmap';
-import Archive from './components/Archive';
+import ComplexityToImplement from './components/ComplexityToImplement';
 import './index.css';
 
 const sections = [
@@ -18,11 +13,9 @@ const sections = [
   { id: 'value-prop', title: 'Value Prop' },
   { id: 'solution', title: 'Solution' },
   { id: 'prototype', title: 'Prototype' },
-  { id: 'solution-specs', title: 'Solution Specs' },
-  { id: 'complexity', title: 'Complexity to Implement' },
+  { id: 'solution-specs', title: 'How It Works' },
+  { id: 'implementation-approach', title: 'Implementation Approach' },
   { id: 'business-value', title: 'Business Value' },
-  { id: 'roadmap', title: 'Roadmap' },
-  { id: 'archive', title: 'Archive' },
 ];
 
 function App() {
@@ -35,12 +28,6 @@ function App() {
       <SolutionDetails />
       <ComplexityToImplement />
       <BusinessValue />
-      <Roadmap />
-      <Archive>
-        <UserJourney />
-        <Features />
-        <KPIs />
-      </Archive>
       
       {/* Footer */}
       <footer className="mt-24 pt-8 border-t border-slate-200 text-center">

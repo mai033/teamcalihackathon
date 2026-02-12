@@ -5,7 +5,8 @@ import {
   Quote,
   User,
   Users,
-  TrendingUp
+  TrendingUp,
+  Crown
 } from 'lucide-react';
 
 const personas = [
@@ -13,7 +14,7 @@ const personas = [
     id: 'deployment-strategist',
     name: 'Deployment Strategist',
     icon: User,
-    avatar: '👤',
+    avatarIcon: User,
     color: 'blue',
     gradient: 'from-blue-500 to-blue-600',
     lightBg: 'bg-blue-50',
@@ -41,7 +42,7 @@ const personas = [
     id: 'product-council',
     name: 'Product Council',
     icon: Users,
-    avatar: '👥',
+    avatarIcon: Users,
     color: 'purple',
     gradient: 'from-purple-500 to-purple-600',
     lightBg: 'bg-purple-50',
@@ -69,7 +70,7 @@ const personas = [
     id: 'leadership',
     name: 'Leadership',
     icon: TrendingUp,
-    avatar: '👔',
+    avatarIcon: Crown,
     color: 'teal',
     gradient: 'from-teal-500 to-teal-600',
     lightBg: 'bg-teal-50',
@@ -169,7 +170,10 @@ export default function ValueProp() {
                 {/* Avatar */}
                 <div className="mb-8">
                   <div className="w-24 h-24 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mb-6 border-4 border-white/30">
-                    <span className="text-5xl">{activePersonaData.avatar}</span>
+                    {(() => {
+                      const AvatarIcon = activePersonaData.avatarIcon;
+                      return <AvatarIcon className="w-12 h-12 text-white" strokeWidth={2} />;
+                    })()}
                   </div>
                   <h3 className="text-3xl md:text-4xl font-bold mb-2">{activePersonaData.name}</h3>
                   <p className="text-white/90 text-lg">{activePersonaData.valueProps.tagline}</p>

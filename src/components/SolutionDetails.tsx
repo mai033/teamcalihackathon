@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Settings, Bot, MessageSquare, FileText, Layers, Megaphone, BookOpen, CheckCircle2 } from 'lucide-react';
+import { Settings, Bot, MessageSquare, FileText, Layers, CheckCircle2 } from 'lucide-react';
 
 const howItWorks = [
   {
@@ -28,34 +28,6 @@ const howItWorks = [
   },
 ];
 
-const keyFeatures = [
-  {
-    icon: MessageSquare,
-    title: 'Helps Write Weekly Updates',
-    description: 'Turns the chore of writing updates into something valuable. Encourages better documentation.',
-  },
-  {
-    icon: Layers,
-    title: 'Surfaces Info Automatically',
-    description: 'You don\'t have to search or ask—similar projects and solutions surface automatically.',
-  },
-  {
-    icon: Megaphone,
-    title: 'Finds Who Solved Similar Use Cases',
-    description: 'Knows who is solving or has solved similar use cases. Connects you with the right people.',
-  },
-  {
-    icon: FileText,
-    title: 'Helps Write Graduation Requests',
-    description: 'Later: Assists with graduation requests. Even later: Recommends graduation based on updates.',
-  },
-  {
-    icon: BookOpen,
-    title: 'Most Up-to-Date Knowledge',
-    description: 'Real-time, recency-ranked updates. Critical for fast-changing AI features.',
-  },
-];
-
 export default function SolutionDetails() {
   return (
     <section id="solution-specs" className="mb-24 scroll-mt-20">
@@ -70,7 +42,7 @@ export default function SolutionDetails() {
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
             <Settings className="w-6 h-6 text-white" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Solution Details</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">How It Works</h2>
         </div>
 
         {/* How It Works */}
@@ -98,29 +70,6 @@ export default function SolutionDetails() {
                   </div>
                   <p className="text-slate-600 leading-relaxed">{item.description}</p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Key Features */}
-        <div className="mb-12">
-          <h3 className="text-3xl font-bold text-slate-900 mb-8">Key Features</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {keyFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-xl bg-slate-50 border border-slate-200 hover:bg-white hover:shadow-md transition-all"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h4 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h4>
-                <p className="text-sm text-slate-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>

@@ -3,7 +3,7 @@ import { Zap, CheckCircle2, Slack, FileText, Bot, TrendingUp } from 'lucide-reac
 
 export default function ComplexityToImplement() {
   return (
-    <section id="complexity" className="mb-24 scroll-mt-20">
+    <section id="implementation-approach" className="mb-24 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -15,7 +15,7 @@ export default function ComplexityToImplement() {
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center">
             <Zap className="w-6 h-6 text-white" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Complexity to Implement</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900">Implementation Approach</h2>
         </div>
 
         {/* High Value, Low Effort Positioning */}
