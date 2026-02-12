@@ -244,26 +244,6 @@ export default function ValueProp() {
           {/* Decorative corner */}
           <div className={`absolute bottom-0 right-0 w-32 h-32 ${activePersonaData.lightBg} rounded-tl-[100px] opacity-30`} />
         </motion.div>
-
-        {/* Bottom CTA banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-24 relative overflow-hidden rounded-2xl"
-        >
-          <div className="absolute inset-0 animated-gradient opacity-90" />
-          <div className="relative p-8 md:p-12 text-center text-white">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              One Solution. Three Personas. Exponential Impact.
-            </h3>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">
-              FDE Pulse isn't just a tool — it's a force multiplier for how FDE teams 
-              collaborate, learn, and deliver value.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
