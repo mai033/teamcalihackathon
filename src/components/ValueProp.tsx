@@ -145,7 +145,10 @@ export default function ValueProp() {
                 className={`px-6 py-3 font-medium transition-colors border-b-2 ${borderColor} ${textColor}`}
               >
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">{persona.avatar}</span>
+                  {(() => {
+                    const AvatarIcon = persona.avatarIcon;
+                    return <AvatarIcon className="w-5 h-5" />;
+                  })()}
                   <span>{persona.name}</span>
                 </div>
                 <p className="text-xs font-normal mt-1">{persona.valueProps.tagline}</p>
